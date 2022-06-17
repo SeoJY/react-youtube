@@ -1,0 +1,110 @@
+.video {
+    &_lst {
+        margin: 0 -10px;
+    }
+    &_item {
+        width: 100%;
+        margin-top: 15px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        vertical-align: top;
+
+        &:hover {
+            .youtube_thumb img {
+                transform: scale(1.05);
+            }
+        };
+
+        &.grid {
+            display: inline-block;
+            width: 50%;
+
+            @media screen and (max-width: 960px) {
+                width: 100%;
+            }
+
+            .video_item_inner {
+                height: 134px;
+            }
+
+            .video_thumb {
+                width: 40%;
+            }
+
+            .video_info {
+                width: 60%;
+            }
+        }
+
+        &.list {
+            display: block;
+            width: 100%;
+
+            .video_thumb {
+                width: 40%;
+            }
+
+            .video_info {
+                width: 60%;
+                padding: 10px 10px 10px 15px;
+                @media screen and (max-width: 960px) {
+                    min-height: 120px;
+                }
+            }
+        }
+    }
+
+    &_item_inner {
+        overflow: hidden;
+        display: flex;
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: 0 2px 5px rgba(0,0,0,.1);
+        color: #000;
+        text-decoration: none;
+    }
+
+    &_thumb {
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform .2s;
+            object-fit: cover;
+        }
+    }
+
+    &_info {
+        overflow: hidden;
+        padding: 30px 20px;
+        flex-grow: 0;
+        box-sizing: border-box;
+    }
+
+    &_title {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-wrap:break-word;
+        font-size: 16px;
+        font-weight: 500;
+        text-overflow: ellipsis;
+
+        .list & {
+            font-size: 14px;
+        }
+    }
+
+    &_channel {
+        font-size: 14px;
+        font-weight: 300;
+        color: #666;
+
+        .list & {
+            font-size: 12px;
+        }
+    }
+}

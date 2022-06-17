@@ -1,0 +1,39 @@
+.view {
+    &_video {
+        position: relative;
+        padding-top: 56%;
+        iframe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_info {
+        padding: 30px;
+    }
+
+    &_title {
+        font-weight: 500;
+    }
+
+    &_channel {
+        font-weight: 100;
+        color: #333;
+    }
+
+    &_desc {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 15px;
+        color: #333;
+        font-weight: 300;
+        font-family: inherit;
+        white-space: pre-wrap;
+    }
+}
