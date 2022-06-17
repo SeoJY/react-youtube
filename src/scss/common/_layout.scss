@@ -19,6 +19,10 @@ body {
     &_content {
         display: flex;
         min-height: calc(100vh - 80px);
+
+        @media screen and (max-width: 960px) {
+            flex-direction: column;
+        }
     }
 
     &_detail {
